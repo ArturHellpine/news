@@ -5,7 +5,6 @@ import PublicRoutes from "./PublicRoutes";
 
 const AuthProvider: FC = () => {
     const {isAuth} = useTypedSelector(state => state.auth)
-
     return (
         isAuth
             ?
