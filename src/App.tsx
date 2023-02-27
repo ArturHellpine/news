@@ -1,9 +1,9 @@
 import React, {FC, useEffect} from 'react';
-import AppRouter from "./components/AppRouter";
+import AuthProvider from "./router/AuthProvider";
 import Navbar from "./components/Navbar";
 import './styles/App.css'
 import {useActions} from "./hooks/useActions";
-import {IUser} from "./models/IUser";
+import {IUser} from "./types/IUser";
 
 const App: FC = () => {
     const {setUser, setIsAuth} = useActions()
@@ -18,7 +18,7 @@ const App: FC = () => {
     return (
         <>
             <Navbar />
-            <AppRouter />
+            <AuthProvider />
         </>
     );
 };

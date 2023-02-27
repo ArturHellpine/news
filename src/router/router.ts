@@ -11,7 +11,7 @@ export interface IRoute {
 export enum RouteNames {
     MAIN = '/main',
     NEWS = '/news',
-    PROFILE = '/profile'
+    PROFILE = '/profile',
 }
 
 export const publicRoutes: IRoute[] = [

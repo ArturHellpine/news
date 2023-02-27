@@ -1,5 +1,5 @@
 import {AuthActionsEnum, SetAuthAction, SetErrorAction, SetModalAction, SetUserAction} from "./types";
-import {IUser} from "../../../models/IUser";
+import {IUser} from "../../../types/IUser";
 import {AppDispatch} from "../../index";
 import axios from "axios";
 
