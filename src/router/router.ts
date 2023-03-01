@@ -1,7 +1,7 @@
 import React from "react";
-import MainPage from "../pages/MainPage";
-import NewsPage from "../pages/NewsPage";
-import ProfilePage from "../pages/ProfilePage";
+import MainPage from "../pages/main/MainPage";
+import NewsPage from "../pages/news/NewsPage";
+import ProfilePage from "../pages/profile/ProfilePage";
 
 export interface IRoute {
     path: string

@@ -1,8 +1,8 @@
-import {IUser} from "../../../types/IUser";
+import {IAdmin} from "../../../types/IAdmin";
 
 export interface AuthState {
     isAuth: boolean
-    user: IUser
+    user: IAdmin
     modal: boolean
     error: string
 }
@@ -20,7 +20,7 @@ export interface SetAuthAction {
 }
 export interface SetUserAction {
     type: AuthActionsEnum.SET_USER
-    payload: IUser
+    payload: IAdmin
 }
 export interface SetModalAction {
     type: AuthActionsEnum.SET_MODAL

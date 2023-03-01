@@ -1,11 +1,11 @@
 import {AuthAction, AuthActionsEnum, AuthState} from "./types";
-import {IUser} from "../../../types/IUser";
+import {IAdmin} from "../../../types/IAdmin";
 
 const initialState: AuthState = {
     isAuth: false,
     error: '',
     modal: false,
-    user: {} as IUser
+    user: {} as IAdmin
 }
 
 export const authReducer = (state = initialState, action: AuthAction): AuthState => {

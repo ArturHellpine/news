@@ -3,14 +3,14 @@ import AuthProvider from "./router/AuthProvider";
 import Navbar from "./components/Navbar";
 import './styles/App.css'
 import {useActions} from "./hooks/useActions";
-import {IUser} from "./types/IUser";
+import {IAdmin} from "./types/IAdmin";
 
 const App: FC = () => {
     const {setUser, setIsAuth} = useActions()
 
     useEffect(() => {
         if(localStorage.getItem('auth')) {
-            setUser({username: localStorage.getItem('username' || '')} as IUser)
+            setUser({username: localStorage.getItem('username' || '')} as IAdmin)
             setIsAuth(true)
         }
     }, [])
