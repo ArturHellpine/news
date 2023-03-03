@@ -1,6 +1,6 @@
-import {AuthActionsEnum, SetAuthAction, SetErrorAction, SetModalAction, SetUserAction} from "./types";
-import {IAdmin} from "../../../types/IAdmin";
-import {AppDispatch} from "../../index";
+import { AuthActionsEnum, SetAuthAction, SetErrorAction, SetModalAction, SetUserAction } from "./types";
+import { IAdmin } from "../../../types/IAdmin";
+import { AppDispatch } from "../../index";
 import axios from "axios";
 
 export const AuthActionCreators = {

@@ -1,5 +1,5 @@
-import {AuthAction, AuthActionsEnum, AuthState} from "./types";
-import {IAdmin} from "../../../types/IAdmin";
+import { AuthAction, AuthActionsEnum, AuthState } from "./types";
+import { IAdmin } from "../../../types/IAdmin";
 
 const initialState: AuthState = {
     isAuth: false,

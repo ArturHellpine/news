@@ -1,6 +1,7 @@
-import React, {FC} from 'react';
-import {IPost} from "../types/IPost";
+import React, { FC } from 'react';
+import { IPost } from "../types/IPost";
 import NewsItem from "./NewsItem";
+import { TransitionGroup, CSSTransition } from "react-transition-group"
 
 interface NewsListProps {
     news: IPost[]
@@ -9,10 +10,14 @@ interface NewsListProps {
 
 const NewsList: FC<NewsListProps> = ({news, deleteNews}) => {
     return (
-        <div>
-            {news.map(post =>
-                <NewsItem post={post} deleteNews={deleteNews} key={post.id} />
-            )}
+        <div className='posts__wrapper'>
+            <TransitionGroup>
+                {news.map(post =>
+                    <CSSTransition key={post.id} timeout={500} classNames='post'>
+                        <NewsItem post={post} deleteNews={deleteNews} key={post.id} />
+                    </CSSTransition>
+                )}
+            </TransitionGroup>
         </div>
     );
 };

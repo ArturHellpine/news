@@ -1,10 +1,10 @@
-import {NewsAction, NewsActionsEnum, NewsState} from "./types";
+import { NewsAction, NewsActionsEnum, NewsState } from "./types";
 
 const initialState: NewsState = {
     news: [],
     isLoading: false,
     error: null,
-    limit: 10,
+    limit: 10
 }
 
 export const newsReducer = (state = initialState, action: NewsAction): NewsState => {
@@ -18,7 +18,8 @@ export const newsReducer = (state = initialState, action: NewsAction): NewsState
         case NewsActionsEnum.SET_NEWS_LIMIT:
             return {...state, limit: action.payload}
         case NewsActionsEnum.DELETE_NEWS:
-            return {...state, ...state.news.filter(n => n.id !== action.payload)}
+            const updatedNews = state.news.filter(n => n.id !== action.payload)
+            return {...state, news: updatedNews}
         default:
             return state
     }

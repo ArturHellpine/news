@@ -1,4 +1,3 @@
-
 .login__form {
     color: white;
     text-align: center;
@@ -11,7 +10,6 @@ form {
     display: flex;
     flex-direction: column;
 }
-
 
 .login__btn {
     padding: 8px 12px;

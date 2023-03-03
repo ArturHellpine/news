@@ -1,4 +1,4 @@
-import {IAdmin} from "../../../types/IAdmin";
+import { IAdmin } from "../../../types/IAdmin";
 
 export interface AuthState {
     isAuth: boolean
@@ -18,14 +18,17 @@ export interface SetAuthAction {
     type: AuthActionsEnum.SET_AUTH
     payload: boolean
 }
+
 export interface SetUserAction {
     type: AuthActionsEnum.SET_USER
     payload: IAdmin
 }
+
 export interface SetModalAction {
     type: AuthActionsEnum.SET_MODAL
     payload: boolean
 }
+
 export interface SetErrorAction {
     type: AuthActionsEnum.SET_ERROR
     payload: string

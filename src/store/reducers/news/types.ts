@@ -1,4 +1,4 @@
-import {IPost} from "../../../types/IPost";
+import { IPost } from "../../../types/IPost";
 
 export interface NewsState {
     news: IPost[]
@@ -18,22 +18,25 @@ export enum NewsActionsEnum {
 interface FetchNewsAction {
     type: NewsActionsEnum.FETCH_NEWS
 }
+
 interface FetchNewsSuccessAction {
     type: NewsActionsEnum.FETCH_NEWS_SUCCESS
     payload: IPost[]
 }
+
 interface FetchNewsErrorAction {
     type: NewsActionsEnum.FETCH_NEWS_ERROR
     payload: string
 }
+
 interface SetNewsLimitAction {
     type: NewsActionsEnum.SET_NEWS_LIMIT
     payload: number
 }
+
 interface DeleteNewsAction {
     type: NewsActionsEnum.DELETE_NEWS
     payload: number
 }
-
 
 export type NewsAction = FetchNewsAction | FetchNewsSuccessAction | FetchNewsErrorAction | SetNewsLimitAction | DeleteNewsAction

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 hr{
     opacity: 0.5;
 }
@@ -25,3 +26,8 @@ hr{
     font-weight: bold;
     letter-spacing: 1px;
 }
+
+.navbar__btns {
+    margin-right: -30px;
+}
+

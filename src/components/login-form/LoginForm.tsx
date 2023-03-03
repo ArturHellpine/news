@@ -1,15 +1,14 @@
-import React, {FC, useState} from 'react';
+import React, { FC, useState } from 'react';
 import Input from "../input/Input";
 import './Login.css'
-import {useTypedSelector} from "../../../hooks/useTypedSelector";
+import { useTypedSelector } from "../../hooks/useTypedSelector";
 import ErrorMessage from "../error/ErrorMessage";
-import {useActions} from "../../../hooks/useActions";
-
+import { useActions } from "../../hooks/useActions";
 
 const LoginForm: FC = () => {
     const [value, setValue] = useState({name: '', password: ''})
-    const {error, user} = useTypedSelector(state => state.auth)
-    const {login, setModal, setError} = useActions()
+    const { error, user } = useTypedSelector(state => state.auth)
+    const { login, setModal, setError } = useActions()
 
     const submit = (e: React.FormEvent) => {
         login(value.name, value.password)
@@ -43,7 +42,8 @@ const LoginForm: FC = () => {
                 type="password"
                 placeholder='Password'/>
             <hr/>
-            {error && <ErrorMessage error={error} />}
+
+            { error && <ErrorMessage error={error} /> }
             <div className='login__btns'>
                 <button type='button' className='login__btn' onClick={cancel}>Cancel</button>
                 <button className='login__btn'>Submit</button>

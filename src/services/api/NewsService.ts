@@ -1,5 +1,5 @@
-import axios, {AxiosPromise} from "axios";
-import {IPost} from "../types/IPost";
+import axios, { AxiosPromise } from "axios";
+import { IPost } from "../../types/IPost";
 
 export default class NewsService {
     static async fetchNews(limit: number): Promise<AxiosPromise<IPost[]>> {

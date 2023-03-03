@@ -1,6 +1,6 @@
-import React, {FC} from 'react';
-import {Navigate, Route, Routes} from "react-router-dom";
-import {publicRoutes, RouteNames} from "./router";
+import React, { FC } from 'react';
+import { Navigate, Route, Routes } from "react-router-dom";
+import { publicRoutes, RouteNames } from "./router";
 
 const PublicRoutes: FC = () => {
     return (

@@ -1,6 +1,6 @@
-import React, {FC} from 'react';
-import {privateRoutes, RouteNames} from "./router";
-import {Navigate, Route, Routes} from "react-router-dom";
+import React, { FC } from 'react';
+import { privateRoutes, RouteNames } from "./router";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 const PrivateRoutes: FC = () => {
     return (
